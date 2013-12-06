@@ -1,4 +1,4 @@
-package depeng.thrift.demo.impl.simple.client;
+package depeng.thrift.demo.client;
 
 import depeng.thrift.demo.HelloService;
 import org.apache.thrift.TException;
@@ -46,7 +46,7 @@ public class HelloClient {
 
 	public static void main(String[] args) {
 		HelloClient helloClient = new HelloClient();
-		helloClient.startClient("fuck thrift");
+		helloClient.startClient(" thrift");
 	}
 
 
