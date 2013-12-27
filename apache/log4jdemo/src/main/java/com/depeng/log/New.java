@@ -9,7 +9,7 @@ public class New {
 	static Logger logger = Logger.getLogger(OtherClass.class);
 
 	void method() {
-		logger.error("I am New class");
+		logger.error("I am New class method");
 	}
 
 

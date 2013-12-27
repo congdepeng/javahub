@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+
+*.iws
+*/target/
+apache/log4jdemo/target/

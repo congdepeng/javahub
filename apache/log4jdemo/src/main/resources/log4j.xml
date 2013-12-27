@@ -3,7 +3,7 @@
 <log4j:configuration>
     <appender name="CA" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="d%d{yyyy-MM-dd HH:mm:ss} t[%t] -5p%-10p C%C - mn%m%n" />
+            <param name="ConversionPattern" value="CA:%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C - %m%n" />
         </layout>
     </appender>
 
@@ -13,15 +13,41 @@
         <param name="Threshold" value="debug" />
         <param name="Append" value="true" />
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C - %m%n" />
+            <param name="ConversionPattern" value="FileLog:%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C - %m%n" />
         </layout>
     </appender>
 
+    <appender name="accessAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="access.log" />
+        <param name="DatePattern" value="'-'yyyy-MM-dd-HH'-access.log'" />
+        <param name="Threshold" value="info" />
+        <param name="Append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} - %m%n" />
+        </layout>
+    </appender>
+
+
+    <appender name="error" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="error.log" />
+        <param name="DatePattern" value="'-'yyyy-MM-dd-HH'-error.log'" />
+        <param name="Threshold" value="error" />
+        <param name="Append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} - %m%n" />
+        </layout>
+    </appender>
+
+
+    <logger name="access.log">
+        <appender-ref ref="accessAppender" />
+    </logger>
+
     <root>
+        <!--this level node is used to control log level-->
         <level value="info" />
         <appender-ref ref="CA" />
-        <appender-ref ref="MyFileLog" />
-        <appender-ref ref="SYSTEM" />
+        <appender-ref ref="error" />
     </root>
 
 </log4j:configuration>
