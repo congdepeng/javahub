@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+    <appender name="CA" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="d%d{yyyy-MM-dd HH:mm:ss} t[%t] -5p%-10p C%C - mn%m%n" />
+        </layout>
+    </appender>
+
+    <appender name="MyFileLog" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="myLogFile.log" />
+        <param name="DatePattern" value="'-'yyyy-MM-dd'-myLogFile.log'" />
+        <param name="Threshold" value="debug" />
+        <param name="Append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C - %m%n" />
+        </layout>
+    </appender>
+
+    <root>
+        <level value="info" />
+        <appender-ref ref="CA" />
+        <appender-ref ref="MyFileLog" />
+        <appender-ref ref="SYSTEM" />
+    </root>
+
+</log4j:configuration>
