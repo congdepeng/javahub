@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../shiro-root-1.2.2/samples/spring" />
+    <file type="web" url="file://$PROJECT_DIR$/../shiro-root-1.2.2/samples/spring-hibernate" />
+    <file type="web" url="file://$PROJECT_DIR$/../shiro-root-1.2.2/samples/web" />
+  </component>
+  <component name="IdProvider" IDEtalkID="0D6AA4BC9ED5CF01174B229C8145FA1D" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-root-1.2.2/samples/quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-root-1.2.2/samples/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+

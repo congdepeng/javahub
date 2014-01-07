@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="samples-sprhib:war exploded">
+    <output-path>$PROJECT_DIR$/../shiro-root-1.2.2/samples/spring-hibernate/target/samples-sprhib-1.2.2</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="samples-sprhib/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="samples-sprhib" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
