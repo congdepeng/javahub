@@ -8,3 +8,4 @@
 *.iws
 */target/
 apache/log4jdemo/target/
+*.DS_Store
