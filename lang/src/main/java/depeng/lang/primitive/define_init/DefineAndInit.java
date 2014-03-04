@@ -1,6 +1,4 @@
-package depeng.lang.primitive.define_init_not_constance;
-
-import depeng.lang.primitive.floatDemo;
+package depeng.lang.primitive.define_init;
 
 /**
  * Created by depeng on 4/3/14.

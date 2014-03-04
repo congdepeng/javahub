@@ -1,4 +1,4 @@
-package depeng.lang.primitive.define_init_not_constance;
+package depeng.lang.primitive.define_init;
 
 /**
  * Created by depeng on 4/3/14.
