@@ -1,4 +1,4 @@
-package depeng.lang.glass.field;
+package depeng.lang.compound.glass.field;
 
 public class MathematicTeacher {
 	private int age;
