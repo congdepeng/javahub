@@ -44,6 +44,9 @@ public class NumberHigh2Low {
 
         // 所以进过精心构造的溢出能得到很多好玩的数值
 
+        s = 128;
+        byte b = (byte) s;
+        System.out.println(b); // -128 溢出到byte的最小值
 
 
 

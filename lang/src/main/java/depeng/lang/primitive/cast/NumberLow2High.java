@@ -7,7 +7,7 @@ public class NumberLow2High {
     public static void main(String[] args) {
 
         //number from low to high
-        byte b = 1;
+        byte b = 127;
         short s = b;
         int i = s;
         long l = i;
@@ -18,16 +18,6 @@ public class NumberLow2High {
         double d = f;
         System.out.println(d); // 1.0
 
-        //number from high to low
-
-
-
-        // form char to number
-
-        // from number to char
-
-
-        // int - float
 
 
 
