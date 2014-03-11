@@ -8,5 +8,31 @@
     <artifactId>lang</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <properties>
+        <jdk.version>1.7</jdk.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--Framework version-->
+        <spring.version>3.1.2.RELEASE</spring.version>
+        <org.slf4j.version>1.6.4</org.slf4j.version>
+        <shiro.version>1.2.2</shiro.version>
+        <junit.version>4.11</junit.version>
+
+        <!--Plugin version-->
+        <jetty.port>8888</jetty.port>
+        <cobertura.version>2.6</cobertura.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     
 </project>

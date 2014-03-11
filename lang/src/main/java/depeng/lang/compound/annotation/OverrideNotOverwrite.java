@@ -3,7 +3,7 @@ package depeng.lang.compound.annotation;
 /**
  * Created by depeng on 11/3/14.
  */
-public class Overwrite {
+public class OverrideNotOverwrite {
 
     //java: method does not override or implement a method from a supertype
 //    @Override
