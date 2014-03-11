@@ -1,6 +1,7 @@
 javahub
 =======
 
+My thinking in Java language.
 
 
 
