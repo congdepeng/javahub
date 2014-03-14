@@ -16,7 +16,21 @@
             <version>1.7.5</version>
         </dependency>
 
-        <!--log implements: logback-->
+        <!--&lt;!&ndash;log implements 1: log4j12&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-log4j12</artifactId>-->
+            <!--<version>1.7.0</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash;log implements 2: simple&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-simple</artifactId>-->
+            <!--<version>1.6.4</version>-->
+        <!--</dependency>-->
+
+        <!--log implements 3: logback-->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
@@ -27,6 +41,16 @@
             <artifactId>logback-classic</artifactId>
             <version>1.0.13</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+
+
+
     </dependencies>
 
 </project>
