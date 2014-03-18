@@ -4,7 +4,7 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern> STDOUT %date %level [%thread] %logger.%class{0}#%method [%file:%line] %msg%n</pattern>
+            <pattern> STDOUT %date %level [%thread] %logger.%class{100}#%method [%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
 
