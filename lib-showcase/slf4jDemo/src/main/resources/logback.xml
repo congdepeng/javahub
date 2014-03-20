@@ -1,18 +1,10 @@
 <configuration scan="true" scanPeriod="30 seconds">
 
-
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern> STDOUT %date %level [%thread] %logger.%class{0}#%method [%file:%line] %msg%n</pattern>
+            <pattern>STDOUT %date %level [%thread] %logger.%class{0}#%method [%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
-
-
-
-
-
-
 
     <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <prudent>true</prudent>
@@ -26,11 +18,9 @@
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
         <encoder>
-            <pattern> ROLLING %date %level [%thread] %logger.%class{0}#%method [%file:%line] %msg%n</pattern>
+            <pattern>ROLLING %date %level [%thread] %logger.%class{0}#%method [%file:%line] %msg%n</pattern>
         </encoder>
     </appender>
-
-
 
 
     <root level="info">
