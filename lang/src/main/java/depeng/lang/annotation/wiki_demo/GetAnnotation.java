@@ -39,7 +39,6 @@ public class GetAnnotation {
 //        }
 
 
-
         /**
          * 得到类的注解，获取在代码中注解到该类的注解的具体的值
          */
@@ -70,19 +69,13 @@ public class GetAnnotation {
         assert retention == null;
 
 
-
-
-
         /**
-         * 该方法返回直接的注解，继承的注解忽略
+         * 该方法返回直接标注在此类上的注解，忽略继承的注解
          */
         Annotation[] declaredAnnotations = glass.getDeclaredAnnotations();
         for (Annotation declaredAnnotation : declaredAnnotations) {
             System.out.println(declaredAnnotation);
         }
-
-
-
 
 
     }

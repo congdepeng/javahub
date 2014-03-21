@@ -1,27 +1,44 @@
-# Java Annotation
+package depeng.lang.annotation.jdk_api;
 
-## Basic Concepts
- - 注解是编译期写入的元数据，虽然可以在运行期通过反射得到注解的信息，但是注解在运行期是不可改变的（或者说没有改变的意义）
- - 因此注解和对象无关，这个概念是讨论Java注解的基础。
- - 类，方法，变量，参数和包都可以被注解
-   * 类的注解，每个由此类生成的对象共享类的注解
-   * 类的方法的注解，判断类中定义的某个方法所否被注解
-   * 类的变量（任意地方出现的变量，局部变量如何反射呢？）
-   * 参数
+import depeng.lang.annotation.wiki_demo.SetCustomAnnotation;
+import depeng.lang.annotation.wiki_demo.TypeHeader;
 
-# TODO
-
- - 如何从classpath下面翻出所有被标注@Component的类
- - 类的变量（任意地方出现的变量，局部变量如何反射呢？）
- - 参数如何？
- - 包？
+import java.lang.annotation.Annotation;
+import java.lang.annotation.Retention;
 
 
-## class类对象本身提供的关于注解的API（JDK 7）
+public class GetClassAnnotation {
+    public static void main(String[] args) {
+        Class<SetCustomAnnotation> glass = SetCustomAnnotation.class;
 
 
-### 取得类上的注解
-```java
+//        /**
+//         *  ??????????????     JDK 8 only
+//         */
+//        AnnotatedType[] annotatedInterfaces = glass.getAnnotatedInterfaces();
+//        for (AnnotatedType annotatedInterface : annotatedInterfaces) {
+//            System.out.println(annotatedInterface);
+//        }
+//
+//
+//
+//        /**
+//         *  ??????????????  JDK 8 only
+//         */
+//
+//        AnnotatedType annotatedSuperclass = glass.getAnnotatedSuperclass();
+//        System.out.println(annotatedSuperclass);
+
+//
+//        /** JDK 8 only
+//         *
+//         * 为了支持@Repeatable
+//         */
+//        TypeHeader[] annotationsByType = glass.getAnnotationsByType(TypeHeader.class);
+//        for (TypeHeader header : annotationsByType) {
+//            System.out.println(header);
+//        }
+
 
         /**
          * 得到类的注解，获取在代码中注解到该类的注解的具体的值
@@ -60,19 +77,5 @@
         for (Annotation declaredAnnotation : declaredAnnotations) {
             System.out.println(declaredAnnotation);
         }
-
-
-
-
-
-```
-
-
-# 从一个类的class对象取得注解信息
-
-```java
-
-
-```
-
-
+    }
+}
