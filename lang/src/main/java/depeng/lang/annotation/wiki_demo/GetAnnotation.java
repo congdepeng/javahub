@@ -2,8 +2,6 @@ package depeng.lang.annotation.wiki_demo;
 
 import java.lang.annotation.Annotation;
 import java.lang.annotation.Retention;
-import java.lang.reflect.AnnotatedType;
-import java.lang.reflect.Type;
 
 /**
  * Created by depeng on 21/3/14.
@@ -13,22 +11,33 @@ public class GetAnnotation {
         Class<SetCustomAnnotation> glass = SetCustomAnnotation.class;
 
 
-        /**
-         *  ??????????????
-         */
-        AnnotatedType[] annotatedInterfaces = glass.getAnnotatedInterfaces();
-        for (AnnotatedType annotatedInterface : annotatedInterfaces) {
-            System.out.println(annotatedInterface);
-        }
+//        /**
+//         *  ??????????????     JDK 8 only
+//         */
+//        AnnotatedType[] annotatedInterfaces = glass.getAnnotatedInterfaces();
+//        for (AnnotatedType annotatedInterface : annotatedInterfaces) {
+//            System.out.println(annotatedInterface);
+//        }
+//
+//
+//
+//        /**
+//         *  ??????????????  JDK 8 only
+//         */
+//
+//        AnnotatedType annotatedSuperclass = glass.getAnnotatedSuperclass();
+//        System.out.println(annotatedSuperclass);
 
+//
+//        /** JDK 8 only
+//         *
+//         * 为了支持@Repeatable
+//         */
+//        TypeHeader[] annotationsByType = glass.getAnnotationsByType(TypeHeader.class);
+//        for (TypeHeader header : annotationsByType) {
+//            System.out.println(header);
+//        }
 
-
-        /**
-         *  ??????????????
-         */
-
-        AnnotatedType annotatedSuperclass = glass.getAnnotatedSuperclass();
-        System.out.println(annotatedSuperclass);
 
 
         /**
@@ -61,13 +70,7 @@ public class GetAnnotation {
         assert retention == null;
 
 
-        /**
-         * 为了支持@Repeatable
-         */
-        TypeHeader[] annotationsByType = glass.getAnnotationsByType(TypeHeader.class);
-        for (TypeHeader header : annotationsByType) {
-            System.out.println(header);
-        }
+
 
 
         /**
