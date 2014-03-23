@@ -670,7 +670,7 @@ System.out.println(hints2.length);          // 2
 @interface MyAnnotation {}
 ```
 
-## 就到这里吧
+## 结束语
 本Java 8编程指南就到此收尾。当然肯定还有大量值得讨论的细节，这取决于你想不想继续探索JDK 8。稍微列举一下例如**Arrays.parallelSort,StampedLock **和**CompletableFuture** 都值得一看。
 我希望这篇文章对你有所帮助且读起来比较舒服。所有的[示例代码](https://github.com/winterbe/java8-tutorial)都放在Github。
 
