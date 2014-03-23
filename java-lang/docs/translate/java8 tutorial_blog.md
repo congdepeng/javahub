@@ -252,7 +252,8 @@ Function<String, String> backToString = toInteger.andThen(String::valueOf);
 
 backToString.apply("123");     // "123"
 ```
-##Suppliers
+
+###Suppliers
 Suppliers 产出一个指定类型的对象结果。和Functions不一样，Suppliers不需要参数。（译注：不需要输入，保证有一个返回值。其实泛型可以算作是它的一个隐式输入。）
 ```java
 Supplier<Person> personSupplier = Person::new;
