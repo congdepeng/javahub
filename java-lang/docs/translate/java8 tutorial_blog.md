@@ -83,9 +83,10 @@ Java编译器可以根据上下文分析出参数类型，因此你可以把参�
 
 ## 函数式接口
 
-那么lambda表达式是如何整合进Java的类型系统的呢？（译注：Java有任何新概念的加入都试图往面向对象上靠前科。）每一个lambda都关联到一个由接口限定的给定的类型。所谓函数式接口~~functional interface~~必须包含一个且只由一个抽象的方法定义。每一个这种类型的lambda表达式将匹配到这个抽象方法。因为默认方法不是抽象的，你可以添加任意多的默认方法到你的函数式接口中。
-How does lambda expressions fit into Javas type system? Each lambda corresponds to a given type, specified by an interface. A so called functional interface must contain exactly one abstract method declaration. Each lambda expression of that type will be matched to this abstract method. Since default methods are not abstract you're free to add default methods to your functional interface.
+那么lambda表达式是如何整合进Java的类型系统的呢？（译注：Java有任何新概念的加入都试图往面向对象上靠前科。）每一个lambda都关联到一个由接口限定的给定的类型。所谓函数式接口~~functional interface~~必须包含一个且只有一个抽象的方法定义。每一个这种类型的lambda表达式将匹配到这个抽象方法。因为默认方法不是抽象的，你可以添加任意多的默认方法到你的函数式接口中。
 我们可以把任意的只含有一个抽象方法的接口看成是lambda表达式。为了确保你的接口满足这个要求，你应该给接口添加一个**@FunctionalInterface**注解。编译器将处理这个注解，如果发现超过1个抽象方法就抛出一个异常。
+
+
 举个例子:
 
 ```java
