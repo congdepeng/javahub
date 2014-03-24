@@ -21,13 +21,13 @@ public class Place {
     }
 
     @AnnoAnywhere(value = "set name method")
-    public void setName(String name) {
+    public void setName(@AnnoAnywhere String name) {
         this.name = name;
     }
 
 
     @AnnoAnywhere(value = "main method")
-    public static void main(String[] args) {
+    public static void main(@AnnoAnywhere String[] args) {
         @AnnoAnywhere(value = "local var")
         int local = 0;
     }
