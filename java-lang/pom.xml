@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>depeng.java</groupId>
-    <artifactId>lang</artifactId>
+    <artifactId>java-lang</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 

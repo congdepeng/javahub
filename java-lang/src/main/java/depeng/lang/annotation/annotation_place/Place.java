@@ -1,15 +1,22 @@
 package depeng.lang.annotation.annotation_place;
 
 @AnnoAnywhere(value = "class level")
-public class Place {
+public class Place extends FatherOfPlace implements PlaceInterface{
 
-    @AnnoAnywhere(value = "object field")
+    @Deprecated
+    @AnnoAnywhere(value = "object field private String name")
     private String name;
 
+    @Deprecated
+    @AnnoAnywhere(value = "object field public String name")
+    public String public_name;
+
+    @Deprecated
     @AnnoAnywhere(value = "class static method")
     public static String country = "SG";
 
 
+    @Deprecated
     @AnnoAnywhere(value = "constructor")
     public Place(String name) {
         this.name = name;
@@ -30,6 +37,11 @@ public class Place {
     public static void main(@AnnoAnywhere String[] args) {
         @AnnoAnywhere(value = "local var")
         int local = 0;
+    }
+
+    @Override
+    public int interfaceMethod() {
+        return 1110;
     }
 }
 
