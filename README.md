@@ -1,8 +1,14 @@
 javahub
 =======
 
-Thinking in Java language.
+Java language stuff. 
 
 
 
- - [Java Lang Docs](https://github.com/congdepeng/javahub/tree/master/java-lang/docs)
+  ## Prerequisites Installation 
+
+    * JKD
+    * MAVEN
+    * Gradle(JDK 1.5+, ships with Groovy lib, set GRADLE_HOME/bin, GRADLE_OPTS is optional)
+
+
