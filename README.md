@@ -14,6 +14,13 @@ Java language stuff.
       - download gradle.zip and unzip to '/home/../../gradle'
       - export GRADLE_HOME='/home/../../gradle'
       - export PATH=$GRADLE_HOME/bin:$PATH
-    
 
+  ## Directory Structure
 
+    * src : java source code
+    * docs : markdown documents
+    * [gradle]
+        - gradle/wrapper
+        - build : classes and resources
+        - build.gradle : like maven pom.xml file
+        - settings.gradle : global setting
