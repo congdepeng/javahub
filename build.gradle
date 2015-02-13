@@ -15,8 +15,9 @@ dependencies {
             
             //google guava
             [group: 'com.google.guava', name: 'guava', version: '18.0'],
-            
-            //jackson core
+            [group: 'cglib', name: 'cglib-nodep', version: '2.2'],
+
+                    //jackson core
             [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
             [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
             [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1'],
