@@ -14,14 +14,15 @@ public class ChannelDemo {
         System.out.println("Current dir using System:" + currentDir);
 
 
-        RandomAccessFile file = new RandomAccessFile("build.gradle", "rw");
+        RandomAccessFile file = new RandomAccessFile("settings.gradle", "rw");
         FileChannel channel = file.getChannel();
         ByteBuffer byteBuffer = ByteBuffer.allocate(10);
-        
-        int read = channel.read(byteBuffer);
-        while (read != -1) {
+
+        //The number of bytes read, possibly zero, or <tt>-1</tt> if the channel has reached end - of-stream
+        int readByteNumber = channel.read(byteBuffer);
+        while (readByteNumber != -1) {
             System.out.println();
-            System.out.println(" - read - "+read);
+            System.out.println(" - read - "+readByteNumber);
             byteBuffer.flip();
             System.out.print("^");
             while (byteBuffer.hasRemaining()) {
@@ -29,7 +30,7 @@ public class ChannelDemo {
             }
             System.out.print("$");
             byteBuffer.clear();
-            read = channel.read(byteBuffer);
+            readByteNumber = channel.read(byteBuffer);
         }
 
         file.close();
