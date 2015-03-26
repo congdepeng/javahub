@@ -1,4 +1,4 @@
-package depeng.design_pattern.uml.uml.vertical.implement;
+package depeng.uml.uml.vertical.implement;
 
 
 /**

@@ -1,4 +1,4 @@
-package depeng.design_pattern.uml.uml.horizontal.associate123.association1;
+package depeng.uml.uml.horizontal.associate123.association1;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package depeng.design_pattern.uml.uml.horizontal.dependency;
+package depeng.uml.uml.horizontal.dependency;
 
 
 
