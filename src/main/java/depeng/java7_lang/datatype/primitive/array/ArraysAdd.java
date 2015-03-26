@@ -1,18 +1,31 @@
 package depeng.java7_lang.datatype.primitive.array;
 
+import com.google.common.collect.Lists;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * 大多数时候，你将String[]转化成List<String>，是因为String[]是固定大小的，想转换成ArrayList可以动态添加，
+ * 但是Arrays.asList(existing)返回的是一个特殊的java.util.Arrays$ArrayList内部类，不支持add方法
+ * 
+ * 使用Google的Guava库就比较靠谱，返回ArrayList<String>
+ * * * 
+ * * *
+ */
 public class ArraysAdd {
     public static void main(String[] args) {
         String[] existing = {"a", "b"};
 
         List<String> list = Arrays.asList(existing);
-        list.add("c");
+        Class<? extends List> aClass = list.getClass();
+        System.out.println(aClass);// class java.util.Arrays$ArrayList
+        list.add("c");// Exception in thread "main" java.lang.UnsupportedOperationException
 
-        for (String s : list) {
-            System.out.println(s);
-        }
+        //使用Google的Guava库就比较靠谱，返回ArrayList<String>
+        ArrayList<String> strings = Lists.newArrayList(existing);
 
 
 //        Exception in thread "main" java.java7_lang.UnsupportedOperationException
