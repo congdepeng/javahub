@@ -10,7 +10,7 @@ public class CharNumberCast {
         int i= c;
         System.out.println(c);//a
 
-        c = '汗';
+//        c = '汗';
         i = c;
         System.out.println(c);//汗
 
