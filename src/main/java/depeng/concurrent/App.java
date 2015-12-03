@@ -37,7 +37,7 @@ public class App {
             try {
                 String s = stringFuture.get();
                 System.out.println(Thread.currentThread().getName() + "---> " + s);
-            } catch (InterruptedException | ExecutionException e) {
+            } catch (Exception e) {
                 System.err.println(Thread.currentThread().getName() + "--> fail a case.");
             }
         }
