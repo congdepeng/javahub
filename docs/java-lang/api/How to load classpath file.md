@@ -9,20 +9,20 @@
            String file = resource.getFile();
            System.out.println(file);
 
-            file:/home/depeng/github/xxx/Modules/core/target/classes/logback-test.xml
-            /home/depeng/github/xxx/Modules/core/target/classes/logback-test.xml
+            file:/home/com.depeng/github/xxx/Modules/core/target/classes/logback-test.xml
+            /home/com.depeng/github/xxx/Modules/core/target/classes/logback-test.xml
 
 ```
 
 ## 或者读一个class文件
 ```java
-    URL resource = SmartLoggerTest.class.getResource("/com/depeng/core/HostPort.class");
+    URL resource = SmartLoggerTest.class.getResource("/com/com.depeng/core/HostPort.class");
           System.out.println(resource);
-                  InputStream is = SmartLoggerTest.class.getResourceAsStream("/com/depeng/core/HostPort.class");
+                  InputStream is = SmartLoggerTest.class.getResourceAsStream("/com/com.depeng/core/HostPort.class");
           System.out.println(is);
 
 
-                     file:/home/depeng/github/xx/core/target/classes/com/depeng/core/HostPort.class
+                     file:/home/com.depeng/github/xx/core/target/classes/com/com.depeng/core/HostPort.class
                      java.io.BufferedInputStream@498edd8d
 
 ```
